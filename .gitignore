@@ -1,5 +1,5 @@
-# Incluir los archivos específicos que no se deben versionar
-# Leer cómo usar .gitignore: https://help.github.com/articles/ignoring-files
+# Incluir los archivos especÃ­ficos que no se deben versionar
+# Leer cÃ³mo usar .gitignore: https://help.github.com/articles/ignoring-files
 
 public
 nbproject

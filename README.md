@@ -1,71 +1,70 @@
 ## Joko SPA Starter Kit
 
-Proyecto utilitario para empezar a construir una aplicaciÛn web SPA (Single Page Application). 
+Proyecto utilitario para empezar a construir una aplicaci√≥n web SPA (Single Page Application). 
 
-Cuenta con funcionalidades y cÛdigo boilerplate ya fuera de la caja.
+Cuenta con funcionalidades y c√≥digo repetitivo ya fuera de la caja.
 
-Como segundo objetivo este proyecto tiene la intenciÛn de ser opinionado en cuanto a estructuraciÛn y nombramiento de archivos para un proyecto JavaScript,
-y tambiÈn sobre nomenclaturas y patrones de cÛdigo que se deben seguir.
+Como segundo objetivo este proyecto tiene la intenci√≥n de establecer un patr√≥n a seguir en cuanto a estructuraci√≥n y nombramiento de archivos para un proyecto JavaScript,
+y tambi√©n sobre nomenclaturas y patrones de c√≥digo.
 
 ### Funcionalidades
-  * P·gina template de login de usuarios 
-  * MÛdulo de autenticaciÛn con JWT
-  * Servidor Mock [Express](http://expressjs.com/) con API de prueba para autenticaciÛn JWT
+  * P√°gina template de login de usuarios 
+  * M√≥dulo de autenticaci√≥n con [JWT](https://jwt.io/introduction/)
+  * Servidor Mock [Express](http://expressjs.com/) con API de prueba para autenticaci√≥n JWT
   * Twitter Bootstrap
   * jQuery
   * Backbone
   * Marionette
-  * ValidaciÛn de formularios con [parsleyjs](http://parsleyjs.org/)
+  * Validaci√≥n de formularios con [Parsleyjs](http://parsleyjs.org/)
   * Manejador de errores de peticiones AJAX
-  * Wrapper construido sobre [noty](http://ned.im/noty/#/about) para mensajes y notificaciones
+  * Wrapper construido sobre [Noty](http://ned.im/noty/#/about) para mensajes y notificaciones
   * Templates con [Handlebars](http://handlebarsjs.com/)
 
 ### Requerimientos
 
-  * Mac OS X, Windows, or Linux
-  * [Node.js](https://nodejs.org/) v4.4.4 o mayor
-  * `npm` v3.8.9 o mayor ([npm](https://docs.npmjs.com/))
+  * Mac OS X, Windows, o Linux
+  * [Node.js](https://nodejs.org/) v4.4.4 o mayor (`node -v` para saber versi√≥n actual)
+  * [npm](https://docs.npmjs.com/) v3.8.9 o mayor (`npm -v` para saber versi√≥n actual)
   
 ### Estructura de directorio
 
-Antes de empezar, tÛmese unos minutos para mirar como luce la estructura de directorio del proyecto:
+Antes de empezar, t√≥mese unos minutos para mirar como luce la estructura de directorio del proyecto:
 
 ```
-.
++-- /app/                       # El c√≥digo de la aplicaci√≥n
+¬¶   +-- /assets/                # Im√°genes y otros recursos de la aplicaci√≥n
+¬¶   +-- /js/                    # C√≥digo Marionette/Backbone de la aplicaci√≥n
+    ¬¶   +-- /controllers/       # Controlador de rutas de Marionette
+    ¬¶   +-- /lib/               # Librerias y utilitarios de Joko y adicionales que se vayan creando
+	¬¶   +-- /models/            # Modelos de Backbone
+	¬¶   +-- /routers/           # Router de Marionette con las rutas de la aplicaci√≥n
+	¬¶   +-- /templates/         # Templates con notaci√≥n de Handlerbars
+	¬¶   +-- /views/             # Vistas de Backbone
+	¬¶   +-- app.js              # Aplicaci√≥n de Marionette con m√©todos globales
+	¬¶   +-- config.js           # Configuraci√≥n global de aplicaci√≥n
+	¬¶   +-- errorhandler.js     # Manejador gen√©rico de errores para peticiones AJAX
+	¬¶   +-- main.js             # Punto de entrada de nuestra aplicaci√≥n, aqui empieza todo :)
+¬¶   +-- /styles/                # CSS de la aplicaci√≥n
+¬¶   +-- /vendor/                # JS y CSS de terceros que queremos congelar para esta aplicaci√≥n
+¬¶   +-- index.html              # La p√°gina HTML que carga la aplicaci√≥n que desarrollamos en /js/
++-- /node_modules/              # Librer√≠as y utilitarios de terceros
 +-- /public/                    # La carpeta para salida de archivos compilados
-+-- /node_modules/              # LibrerÌas y utilitarios de terceros
-+-- /app/                       # El cÛdigo de la aplicaciÛn
-¶   +-- /assets/                # Im·genes y otros recursos de la aplicaciÛn
-¶   +-- /js/                    # CÛdigo Marionette/Backbone de la aplicaciÛn
-    ¶   +-- /controllers/       # Controlador de rutas de Marionette
-    ¶   +-- /lib/               # Librerias y utilitarios de Joko y adicionales que se vayan creando
-	¶   +-- /models/            # Modelos de Backbone
-	¶   +-- /routers/           # AppRouter de Marionette con las rutas de la aplicaciÛn
-	¶   +-- /templates/         # Templates con notaciÛn de Handlerbars
-	¶   +-- /views/             # Vistas de Backbone
-	¶   +-- app.js              # AplicaciÛn de Marionette con mÈtodos globales
-	¶   +-- config.js           # ConfiguraciÛn global de aplicaciÛn
-	¶   +-- errorhandler.js     # Manejador genÈrico de errores para peticiones AJAX
-	¶   +-- main.js             # Punto de entrada de nuestra aplicaciÛn, ac· empieza todo :)
-¶   +-- /styles/                # CSS de la aplicaciÛn
-¶   +-- /vendor/                # JS y CSS de terceros que queremos congelar para esta aplicaciÛn
-¶   +-- index.html              # La p·gina HTML que carga la aplicaciÛn que construimos en js/
 +-- /server/                    # Servidor Express
-+-- /tasks/                     # Scripts para automatizar la construcciÛn de la aplicaciÛn
-¶   +-- /assets.js              # Copia las im·genes al directorio public
-¶   +-- /browserify.js          # Convierte nuestros JS en algo ejecutable en un browser, los copia a un directorio de salida (public)
-¶   +-- /paths.js               # Utilitario que contiene las rutas de entrada y salida
-¶   +-- /serverMock.js          # Lanza un servidor de pruebas Express
-¶   +-- /styles.js              # Procesa los archivos de estilo CSS y los copia a un diretorio de salida (public)
-+-- gulpfile.js                 # Script padre que ejecuta las tareas de tasks/
-+-- package.json                # Lista de librerÌas y utilidades de terceros
++-- /tasks/                     # Scripts para automatizar la construcci√≥n de la aplicaci√≥n
+¬¶   +-- /assets.js              # Copia las im√°genes al directorio public
+¬¶   +-- /browserify.js          # Convierte nuestros c√≥digo fuente JS en algo ejecutable en un browser, los copia a /public/
+¬¶   +-- /paths.js               # Utilitario que contiene las rutas de entrada y salida
+¬¶   +-- /serverMock.js          # Lanza un servidor de pruebas Express
+¬¶   +-- /styles.js              # Procesa los archivos de estilo CSS y los copia a un directorio de /public/
++-- gulpfile.js                 # Script padre que ejecuta las tareas de /tasks/
++-- package.json                # Lista de librer√≠as y utilidades de terceros
 ```
 
-### Inicio R·pido
+### Inicio R√°pido
 
-#### 1. Obtener la ˙ltima versiÛn
+#### 1. Obtener la √∫ltima versi√≥n
 
-Clone en su m·quina la ˙ltima versiÛn de JSK (Joko Starter Kit):
+Clone en su m√°quina la √∫ltima versi√≥n de JSSK (Joko SPA Starter Kit):
 
 ```shell
 $ git clone https://github.com/jokoframework/joko_spa_starter_kit.git app_ejemplo
@@ -74,19 +73,19 @@ $ cd app_ejemplo
 
 #### 2. Ejecutar `npm install`
 
-Esto va a instalar las dependencias en tiempo de ejecuciÛn y las dependencias de desarrolladores 
+Esto va a instalar las dependencias en tiempo de ejecuci√≥n y las dependencias de desarrolladores 
 listadas en el archivo [package.json](../package.json)
 
 
 #### 3. Ejecutar `npm run start:mock`
 
-Este comando va a construir la aplicaciÛn, copiando los archivos de cÛdigo fuente (`/src`)
-al directorio `/public` de salida. Tan pronto como esta construcciÛn finalice va a lanzar
-un servidor de pruebas Express y va a abrir el navegador por defecto en la ruta:
+Este comando va a construir la aplicaci√≥n, copiando los archivos de c√≥digo fuente situados en `/app` al directorio `/public` de salida. 
 
-> [http://localhost:3000/](http://localhost:9000/) <br>
+Tan pronto como esta construcci√≥n finalice, se lanzar√° un servidor de pruebas abri√©ndose el navegador en la ruta:
 
-Se puede acceder a la aplicaciÛn usando las credenciales de prueba:
+> [http://localhost:9000/](http://localhost:9000/)
+
+Se puede acceder a la aplicaci√≥n usando las credenciales de prueba:
 ```
 email: clark@nomail.com
 clave: 12345
@@ -94,7 +93,8 @@ clave: 12345
 
 ### TODO
 
-* DocumentaciÛn con recetas para agregar nuevas vistas de Backbone
-* DocumentaciÛn con recetas para agregar librerÌas y utilitarios de terceros
-* Scripts para construir la aplicaciÛn en modo desarrollo (sin servidor de pruebas)
-* Scripts para construir la aplicaciÛn en modo producciÛn
+* Documentaci√≥n con recetas para agregar nuevas vistas de Backbone y otras funcionalidades
+* Documentaci√≥n con recetas para agregar librer√≠as y utilitarios de terceros
+* Documentaci√≥n general y limpieza del c√≥digo ya existente
+* Scripts para construir la aplicaci√≥n en modo desarrollo (sin servidor de pruebas)
+* Scripts para construir la aplicaci√≥n en modo producci√≥n
