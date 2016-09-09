@@ -25,4 +25,5 @@ gulp.task('default', ['assets', 'vendor', 'styles', 'browserify']);
 // Ejecuta tareas por defecto y levanta server con endpoints de prueba
 gulp.task('start:mock', ['default'], require('./tasks/serverMock'));
 
-gulp.task('dev', ['default'], require('./tasks/externalEndpoint'));
+// Ejectua tareas por defecto y llama a un servidor externo que se configura como parametro
+gulp.task('dev', ['default'], require('./tasks/externalEndpoint')('http://localhost:8080'));

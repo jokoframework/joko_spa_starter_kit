@@ -4,9 +4,9 @@ var url         = require('url');
 var proxy       = require('proxy-middleware');
 var reload      = browserSync.reload;
 
-module.exports = function() {
+module.exports = function( externalApi ) {
 
-  var proxyOptions = url.parse('http://localhost:8080');
+  var proxyOptions = url.parse(externalApi);
   proxyOptions.route = '/api';
 
   browserSync.init({
