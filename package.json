@@ -40,6 +40,6 @@
   },
   "scripts": {
     "start:mock": "gulp start:mock",
-    "start:dev": "gulp dev"
+    "dev": "gulp dev"
   }
 }
