@@ -98,3 +98,7 @@ clave: 12345
 * Documentación general y limpieza del código ya existente
 * Scripts para construir la aplicación en modo desarrollo (sin servidor de pruebas)
 * Scripts para construir la aplicación en modo producción
+
+### Colaboradores
+
++ [Carlos Carvallo](https://github.com/carloscarvallo)
