@@ -1,6 +1,6 @@
 ## Joko SPA Starter Kit
 
-Proyecto utilitario para empezar a construir una aplicación web SPA (Single Page Application). 
+Proyecto utilitario para empezar a construir una aplicación web SPA (Single Page Application).
 
 Cuenta con funcionalidades y código repetitivo ya fuera de la caja.
 
@@ -8,7 +8,7 @@ Como segundo objetivo este proyecto tiene la intención de establecer un patrón
 y también sobre nomenclaturas y patrones de código.
 
 ### Funcionalidades
-  * Página template de login de usuarios 
+  * Página template de login de usuarios
   * Módulo de autenticación con [JWT](https://jwt.io/introduction/)
   * Servidor Mock [Express](http://expressjs.com/) con API de prueba para autenticación JWT
   * Twitter Bootstrap
@@ -25,7 +25,7 @@ y también sobre nomenclaturas y patrones de código.
   * Mac OS X, Windows, o Linux
   * [Node.js](https://nodejs.org/) v4.4.4 o mayor (`node -v` para saber versión actual)
   * [npm](https://docs.npmjs.com/) v3.8.9 o mayor (`npm -v` para saber versión actual)
-  
+
 ### Estructura de directorio
 
 Antes de empezar, tómese unos minutos para mirar como luce la estructura de directorio del proyecto:
@@ -73,13 +73,13 @@ $ cd app_ejemplo
 
 #### 2. Ejecutar `npm install`
 
-Esto va a instalar las dependencias en tiempo de ejecución y las dependencias de desarrolladores 
+Esto va a instalar las dependencias en tiempo de ejecución y las dependencias de desarrolladores
 listadas en el archivo [package.json](../package.json)
 
 
 #### 3. Ejecutar `npm run start:mock`
 
-Este comando va a construir la aplicación, copiando los archivos de código fuente situados en `/app` al directorio `/public` de salida. 
+Este comando va a construir la aplicación, copiando los archivos de código fuente situados en `/app` al directorio `/public` de salida.
 
 Tan pronto como esta construcción finalice, se lanzará un servidor de pruebas abriéndose el navegador en la ruta:
 
@@ -102,3 +102,5 @@ clave: 12345
 ### Colaboradores
 
 + [Carlos Carvallo](https://github.com/carloscarvallo)
++ [Guillermo Leguizamon](https://github.com/quesoka)
++ [Jesus Pavia](https://github.com/Pavs10)
