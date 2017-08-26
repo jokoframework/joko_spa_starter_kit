@@ -22,7 +22,8 @@ module.exports = function(config) {
             module: {
                 loaders : [
                     { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader' },
-                    { test: /\.hbs$/, loader: 'handlebars-loader' }
+                    { test: /\.hbs$/, loader: 'handlebars-loader' },
+                    { test: /\.json$/, loader: 'json-loader' }
                 ]
             }
         },

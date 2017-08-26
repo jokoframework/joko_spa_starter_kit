@@ -1,7 +1,8 @@
 import Bn from 'backbone'
+import env from '../env'
 
 export default Bn.Collection.extend({
     
-    url: 'https://jsonplaceholder.typicode.com/users'
+    url: `${env.API}/users`
     
 })

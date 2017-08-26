@@ -23,7 +23,7 @@ describe('UsersView', () => {
     
     it('should render', () => {
         view.render()
-        expect(view.$el.find('h2').text()).to.equal('Users')
+        expect(view.$el.find('h2').text()).to.equal('Usuarios')
     })
     
 })
